@@ -1,0 +1,93 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tip Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="app">
+    <div class="calculator-card">
+
+      <section class="input-section">
+        <h1>Tip Calculator</h1>
+
+        <!-- Bill -->
+        <div class="form-group">
+          <label for="bill">Bill Amount (₹)</label>
+          <input
+            type="text"
+            id="bill"
+            inputmode="decimal"
+            placeholder="Enter bill amount"
+          />
+          <p class="error" id="billError"></p>
+        </div>
+
+        <!-- Tip -->
+        <div class="form-group">
+          <label>Select Tip %</label>
+
+          <div class="tip-buttons">
+            <button class="tip-btn active" data-tip="10">10%</button>
+            <button class="tip-btn" data-tip="15">15%</button>
+            <button class="tip-btn" data-tip="20">20%</button>
+            <button class="tip-btn" data-tip="25">25%</button>
+          </div>
+
+          <input
+            type="text"
+            id="customTip"
+            inputmode="decimal"
+            placeholder="Custom tip %"
+          />
+
+          <p class="error" id="tipError"></p>
+        </div>
+
+        <!-- People -->
+        <div class="form-group">
+          <label for="people">Number of People</label>
+          <input
+            type="text"
+            id="people"
+            inputmode="numeric"
+            placeholder="Enter number of people"
+            value="1"
+          />
+          <p class="error" id="peopleError"></p>
+        </div>
+
+      </section>
+
+      <!-- Results -->
+      <section class="result-section">
+
+        <div class="result-box">
+          <span>Total Tip</span>
+          <h2 id="tipAmount">₹0.00</h2>
+        </div>
+
+        <div class="result-box">
+          <span>Grand Total</span>
+          <h2 id="grandTotal">₹0.00</h2>
+        </div>
+
+        <div class="result-box">
+          <span>Per Person</span>
+          <h2 id="perPerson">₹0.00</h2>
+        </div>
+
+        <button id="resetBtn">Reset</button>
+
+      </section>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
